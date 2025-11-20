@@ -4,6 +4,9 @@ import java.util.EnumSet;
 import java.util.Objects;
 import java.util.Set;
 
+import chapter2.item2.NyPizza.Size;
+import chapter2.item2.Pizza.Topping;
+
 /**
  * Item2: Consider a builder when faced with many constructor parameters
  */
@@ -19,6 +22,9 @@ public class item2 {
     }
     NutritionFactsBuilder cocaCola3 = new NutritionFactsBuilder.Builder(240, 8).calories(100).sodium(35)
             .carbohydrate(27).build();
+
+    NyPizza pizza = new NyPizza.Builder(Size.SMALL).addTopping(Topping.SAUSAGE).addTopping(Topping.ONION).build();
+    Calzone calzone = new Calzone.Builder().addTopping(Topping.HAM).sauceInside().build();
 }
 
 /**
